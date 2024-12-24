@@ -1,0 +1,205 @@
+body {
+    margin:0;
+    padding:0;
+    background-image: url('image/sun.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background-color: #f0f0f0;
+  }
+  
+  header h1 {
+    margin-right: auto;
+    font-family: 'Brush Script MT', cursive; /* 设置艺术字字体，这里使用一种常见的艺术字体，可根据需求替换 */
+    font-size: 36px;
+    color: #0630a3; /* 设置艺术字颜色 */
+    text-shadow: 2px 2px 2px #ccc; /* 添加文字阴影效果 */
+  }
+  
+  header ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  header ul li {
+    margin: 0 20px;
+    transition: all 0.3s ease;
+  }
+  
+  header ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 22px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: all 0.3s ease;
+  }
+  
+  header ul li:hover {
+    transform: scale(1.2);
+  }
+  
+  header ul li:hover a {
+    color: #3ab600;
+  }
+  
+  header ul li:hover a::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #e74c3c;
+    margin-top: 5px;
+  }
+  /* 全局样式重置，去除浏览器默认的内外边距 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* body样式 */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4; /* 设置一个背景颜色，你也可以换成背景图片等其他背景样式 */
+    color: #333;
+    /* 设置页面整体淡入动画效果 */
+    animation: fadeInPage 1s ease forwards;
+}
+
+/* 页面淡入动画关键帧定义 */
+@keyframes fadeInPage {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* header样式 */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #7ecc00;
+    color: white;
+    /* 设置header从右侧滑入的动画效果 */
+    animation: slideInHeader 1s ease forwards;
+    animation-delay: 0.3s; /* 延迟0.3秒开始动画，营造先后顺序感 */
+}
+
+/* header滑入动画关键帧定义 */
+@keyframes slideInHeader {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+header h1 {
+    font-size: 28px;
+    font-family: 'Brush Script MT', cursive;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+header ul {
+    list-style-type: none;
+    display: flex;
+    /* 设置菜单列表项从右向左逐个滑动出现的动画效果 */
+    animation: slideInMenu 1s ease forwards;
+    animation-delay: 0.6s; /* 延迟0.6秒开始动画 */
+}
+
+/* 菜单列表项滑动动画关键帧定义 */
+@keyframes slideInMenu {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+header ul li {
+    margin-left: 20px;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+header ul li a:hover {
+    color: #f4f4f4;
+    text-decoration: underline;
+    /* 添加鼠标悬停时的放大效果动画 */
+    animation: scaleOnHover 0.3s ease forwards;
+}
+
+/* 鼠标悬停放大动画关键帧定义 */
+@keyframes scaleOnHover {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+/* 页面主要内容区域样式，这里简单示例一个通用的容器样式 */
+.main-content {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    background-color: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    /* 设置内容区域淡入动画效果 */
+    animation: fadeInContent 1s ease forwards;
+    animation-delay: 0.9s; /* 延迟0.9秒开始动画 */
+}
+
+/* 内容区域淡入动画关键帧定义 */
+@keyframes fadeInContent {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* 响应式设计媒体查询示例，当屏幕宽度小于600px时调整样式 */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header ul {
+        margin-top: 10px;
+    }
+
+    header ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+  .main-content {
+        width: 90%;
+    }
+}

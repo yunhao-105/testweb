@@ -1,0 +1,26 @@
+/* 全局样式重置，去除浏览器默认的内外边距 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space - around;
+    align-items: center;
+    min - height: 100vh;
+}
+
+img {
+    width: 23%; /* 大约四个一行，留有一定间隙 */
+    height: auto;
+    margin: 10px 0;
+    object - fit: cover;
+}
+
+img:hover {
+    transform: scale(1.05); /* 鼠标悬停时放大图片 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* 鼠标悬停时阴影加深 */
+}
